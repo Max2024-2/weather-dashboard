@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Weather Dashboard</h1>
+      <p class="subtitle">Search a city to see current weather and forecasts</p>
+    </header>
+
+    <main>
+      <div class="search">
+        <input id="city-input" type="text" placeholder="Enter city (e.g. London, Paris)" />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <div id="status"></div>
+
+      <section id="current" class="card hidden">
+        <h2 id="current-city"></h2>
+        <div class="current-grid">
+          <div class="weather-main">
+            <img id="current-icon" src="" alt="" />
+            <div>
+              <div id="current-temp" class="temp"></div>
+              <div id="current-desc" class="desc"></div>
+            </div>
+          </div>
+          <div class="weather-details">
+            <div>Feels like: <span id="current-feels"></span></div>
+            <div>Humidity: <span id="current-humidity"></span>%</div>
+            <div>Wind: <span id="current-wind"></span> m/s</div>
+            <div>Pressure: <span id="current-pressure"></span> hPa</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="forecast" class="hidden">
+        <h3>5-day forecast</h3>
+        <div id="forecast-list" class="forecast-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Data from OpenWeatherMap • Cached for 10 minutes</small>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
